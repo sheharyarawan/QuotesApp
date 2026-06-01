@@ -11,6 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.quotesapp.model.Quote
+import com.example.quotesapp.model.QuoteData.quotes
+import com.example.quotesapp.screens.QuoteListScreen
 import com.example.quotesapp.ui.theme.QuotesAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,8 +22,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             QuotesAppTheme {
-
+                App()
             }
         }
     }
+}
+
+@Composable
+fun App() {
+    QuoteListScreen(quotes)
 }

@@ -45,7 +45,7 @@ fun QuoteListItem(quote: Quote) {
                 rotate(180F)
             )
             Spacer(modifier= Modifier.padding(4.dp))
-            Column() {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(text = quote.text,
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.padding(0.dp, 0.dp,0.dp,8.dp))
